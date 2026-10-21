@@ -1,0 +1,747 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #050505;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    padding: 20px 0;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar-brand {
+    font-weight: 900;
+}
+
+.bmw-logo {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.nav-link {
+    color: #aaa !important;
+
+    margin-left: 20px;
+
+    transition: .3s;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn-bmw {
+    background: linear-gradient(
+        135deg,
+        #0066ff,
+        #00a8ff
+    );
+
+    border: none;
+
+    color: white;
+
+    padding: 12px 25px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-bmw:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 120, 255, .4);
+
+    color: white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.9),
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.8)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=2000&q=90"
+        );
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 50%,
+            rgba(0,100,255,.25),
+            transparent 35%
+        );
+}
+
+.hero-content {
+    position: relative;
+}
+
+.small-title {
+    color: #168cff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    font-size: clamp(80px, 13vw, 180px);
+
+    line-height: .9;
+
+    font-weight: 900;
+
+    letter-spacing: -8px;
+
+    margin: 25px 0;
+}
+
+.hero h1 span {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        #fff,
+        #168cff
+    );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text {
+    color: #bbb;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 35px;
+}
+
+.hero-buttons .btn {
+    margin-right: 10px;
+}
+
+
+/* ================= HERO SPECS ================= */
+
+.hero-specs {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    padding-left: 50px;
+}
+
+.spec {
+    border-left: 2px solid #168cff;
+
+    padding-left: 20px;
+}
+
+.spec strong {
+    display: block;
+
+    font-size: 30px;
+}
+
+.spec span {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats {
+    background: #080808;
+
+    border-top: 1px solid #222;
+
+    border-bottom: 1px solid #222;
+
+    padding: 50px 0;
+}
+
+.stat-box i {
+    color: #168cff;
+
+    font-size: 35px;
+}
+
+.stat-box h3 {
+    font-size: 35px;
+
+    margin: 10px 0 0;
+}
+
+.stat-box p {
+    color: #888;
+}
+
+
+/* ================= MODELS ================= */
+
+.models-section {
+    background: #080808;
+
+    padding: 120px 0;
+}
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading span {
+    color: #168cff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.section-heading h2 {
+    font-size: 55px;
+
+    font-weight: 800;
+
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #888;
+}
+
+
+/* ================= CARDS ================= */
+
+.car-card {
+    background: #111;
+
+    border: 1px solid #222;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    transition: .4s;
+}
+
+.car-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #168cff;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.5);
+}
+
+.car-image {
+    height: 280px;
+
+    position: relative;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: .5s;
+}
+
+.car-card:hover .car-image {
+    transform: scale(1.03);
+}
+
+.m4 {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.5)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&w=1000&q=85"
+        );
+}
+
+.m5 {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.5)
+        ),
+        url(
+            "https://images.unsplash.com/photo-1556189250-72ba954cfc2b?auto=format&fit=crop&w=1000&q=85"
+        );
+}
+
+.i5 {
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.5)
+        ),
+        url(
+            ""
+        );
+}
+
+.car-badge {
+    position: absolute;
+
+    top: 20px;
+
+    left: 20px;
+
+    background: #168cff;
+
+    padding: 7px 12px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.car-info {
+    padding: 30px;
+}
+
+.car-info small {
+    color: #168cff;
+
+    font-weight: 700;
+}
+
+.car-info h3 {
+    font-size: 25px;
+
+    margin: 8px 0 15px;
+}
+
+.car-info p {
+    color: #888;
+
+    line-height: 1.7;
+}
+
+.car-details {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #222;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+.car-details i {
+    color: #168cff;
+}
+
+
+/* ================= TECHNOLOGY ================= */
+
+.technology {
+    padding: 130px 0;
+
+    background:
+        linear-gradient(
+            120deg,
+            #050505,
+            #09172a
+        );
+}
+
+.technology h2 {
+    font-size: 65px;
+
+    font-weight: 800;
+
+    margin: 20px 0;
+}
+
+.technology h2 span {
+    color: #168cff;
+}
+
+.technology > .container > .row > .col-lg-6 > p {
+    color: #999;
+
+    line-height: 1.8;
+
+    max-width: 550px;
+}
+
+.technology-list {
+    margin-top: 40px;
+}
+
+.tech-item {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #222;
+}
+
+.tech-icon {
+    min-width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #0d1d32;
+
+    color: #168cff;
+
+    font-size: 22px;
+}
+
+.tech-item h5 {
+    margin: 0;
+}
+
+.tech-item p {
+    color: #777;
+
+    margin: 5px 0 0;
+}
+
+
+/* ================= TECHNOLOGY VISUAL ================= */
+
+.tech-visual {
+    position: relative;
+
+    height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(22,140,255,.5);
+}
+
+.circle-one {
+    width: 400px;
+    height: 400px;
+
+    animation: rotate 15s linear infinite;
+}
+
+.circle-two {
+    width: 280px;
+    height: 280px;
+
+    border-style: dashed;
+
+    animation: rotate 10s linear infinite reverse;
+}
+
+.tech-number {
+    font-size: 180px;
+
+    font-weight: 900;
+
+    color: #168cff;
+
+    text-shadow:
+        0 0 50px rgba(22,140,255,.5);
+}
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* ================= EXPERIENCE ================= */
+
+.experience {
+    padding: 100px 0;
+
+    background: #050505;
+}
+
+.experience-box {
+    padding: 70px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #101010,
+            #0a192b
+        );
+
+    border: 1px solid #222;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+}
+
+.experience h2 {
+    font-size: 45px;
+
+    font-weight: 800;
+
+    margin: 20px 0;
+}
+
+.experience h2 span {
+    color: #168cff;
+}
+
+.experience p {
+    color: #888;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    padding: 120px 0;
+
+    background: #080808;
+}
+
+.about h2 {
+    font-size: 55px;
+
+    font-weight: 800;
+
+    margin-top: 20px;
+}
+
+.about h2 span {
+    color: #168cff;
+}
+
+.about p {
+    color: #888;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #030303;
+
+    padding: 70px 0 30px;
+
+    color: white;
+}
+
+.footer-logo {
+    font-size: 40px;
+
+    font-weight: 900;
+
+    letter-spacing: 5px;
+}
+
+footer p {
+    color: #666;
+}
+
+footer h5 {
+    margin-bottom: 20px;
+}
+
+footer a {
+    display: block;
+
+    color: #777;
+
+    text-decoration: none;
+
+    margin-bottom: 10px;
+
+    transition: .3s;
+}
+
+footer a:hover {
+    color: #168cff;
+}
+
+.socials {
+    display: flex;
+
+    gap: 15px;
+}
+
+.socials a {
+    font-size: 25px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal-content {
+    background: #111;
+
+    color: white;
+
+    border: 1px solid #333;
+}
+
+.form-control {
+    background: #080808;
+
+    color: white;
+
+    border-color: #333;
+}
+
+.form-control:focus {
+    background: #080808;
+
+    color: white;
+
+    border-color: #168cff;
+
+    box-shadow: none;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 80px;
+
+        letter-spacing: -5px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 40px;
+    }
+
+    .technology h2 {
+        font-size: 45px;
+    }
+
+    .experience-box {
+        padding: 40px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .experience h2 {
+        font-size: 35px;
+    }
+
+    .about h2 {
+        font-size: 40px;
+    }
+
+}
